@@ -1,5 +1,5 @@
 %define name aoetools
-%define version 12
+%define version 15
 %define release %mkrel 1
 
 Summary: Programs to setup ATA over Ethernet device
@@ -7,7 +7,6 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: %{name}-%{version}.tar.bz2
-Patch0: aoetools.destdir.patch
 License: GPL 
 Group: System/Kernel and hardware
 Url: http://sourceforge.net/projects/aoetools/
@@ -19,8 +18,7 @@ network storage protocol, a simple protocol for using storage over
 an ethernet LAN.
 
 %prep
-%setup
-%patch0 -p0 -b .destdir
+%setup -q
 
 %build
 %make CFLAGS="%optflags"
@@ -40,6 +38,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc HACKING NEWS README TODO
 %_sbindir/*
 %_mandir/*/*
-
-
-
