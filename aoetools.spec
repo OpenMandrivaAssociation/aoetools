@@ -1,12 +1,12 @@
 %define name aoetools
-%define version 15
+%define version 16
 %define release %mkrel 1
 
 Summary: Programs to setup ATA over Ethernet device
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: %{name}-%{version}.tar.bz2
+Source0: %{name}-%{version}.tar.gz
 License: GPL 
 Group: System/Kernel and hardware
 Url: http://sourceforge.net/projects/aoetools/
