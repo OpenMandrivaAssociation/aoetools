@@ -10,6 +10,7 @@ Source0: %{name}-%{version}.tar.gz
 License: GPL 
 Group: System/Kernel and hardware
 Url: http://sourceforge.net/projects/aoetools/
+BuildRoot: %{_tmppath}/%{name}-buildroot
 
 %description
 The aoetools are programs for users of the ATA over Ethernet (AoE)
