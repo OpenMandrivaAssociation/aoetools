@@ -1,5 +1,5 @@
 %define name aoetools
-%define version 16
+%define version 22
 %define release %mkrel 1
 
 Summary: Programs to setup ATA over Ethernet device
@@ -22,7 +22,6 @@ an ethernet LAN.
 
 %build
 %make CFLAGS="%optflags"
-
 
 %install
 rm -rf $RPM_BUILD_ROOT
