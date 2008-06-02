@@ -1,5 +1,5 @@
 %define name aoetools
-%define version 23
+%define version 26
 %define release %mkrel 1
 
 Summary: Programs to setup ATA over Ethernet device
@@ -34,6 +34,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%doc HACKING NEWS README TODO
+%doc HACKING NEWS README
 %_sbindir/*
 %_mandir/*/*
