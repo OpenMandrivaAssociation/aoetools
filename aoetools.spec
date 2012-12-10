@@ -1,16 +1,15 @@
 %define name aoetools
-%define version 30
-%define release %mkrel 2
+%define version 35
+%define release %mkrel 1
 
 Summary: Programs to setup ATA over Ethernet device
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: %{name}-%{version}.tar.gz
-License: GPL 
+Source0: http://downloads.sourceforge.net/project/aoetools/aoetools/%{version}/%{name}-%{version}.tar.gz
+License: GPLv2+ 
 Group: System/Kernel and hardware
 Url: http://sourceforge.net/projects/aoetools/
-BuildRoot: %{_tmppath}/%{name}-buildroot
 
 %description
 The aoetools are programs for users of the ATA over Ethernet (AoE)
@@ -24,16 +23,10 @@ an ethernet LAN.
 %make CFLAGS="%optflags"
 
 %install
-rm -rf $RPM_BUILD_ROOT
-
 mkdir -p %buildroot
 %makeinstall_std
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
 %files
-%defattr(-,root,root)
 %doc HACKING NEWS README
 %_sbindir/*
 %_mandir/*/*
