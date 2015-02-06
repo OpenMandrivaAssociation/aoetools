@@ -1,6 +1,6 @@
 %define name aoetools
 %define version 35
-%define release %mkrel 1
+%define release 2
 
 Summary: Programs to setup ATA over Ethernet device
 Name: %{name}
