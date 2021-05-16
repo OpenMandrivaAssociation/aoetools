@@ -1,15 +1,11 @@
-%define name aoetools
-%define version 35
-%define release 2
-
 Summary: Programs to setup ATA over Ethernet device
-Name: %{name}
-Version: %{version}
-Release: %{release}
-Source0: http://downloads.sourceforge.net/project/aoetools/aoetools/%{version}/%{name}-%{version}.tar.gz
+Name: aoetools
+Version: 37
+Release: 1
+Source0: https://github.com/OpenAoE/aoetools/archive/refs/tags/aoetools-%{version}.tar.gz
 License: GPLv2+ 
 Group: System/Kernel and hardware
-Url: http://sourceforge.net/projects/aoetools/
+Url: https://github.com/OpenAoE/aoetools
 
 %description
 The aoetools are programs for users of the ATA over Ethernet (AoE)
@@ -17,14 +13,14 @@ network storage protocol, a simple protocol for using storage over
 an ethernet LAN.
 
 %prep
-%setup -q
+%autosetup -p1 -n %{name}-%{name}-%{version}
 
 %build
-%make CFLAGS="%optflags"
+%make_build CFLAGS="%optflags"
 
 %install
 mkdir -p %buildroot
-%makeinstall_std
+%make_install
 
 %files
 %doc HACKING NEWS README
