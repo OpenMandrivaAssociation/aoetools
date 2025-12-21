@@ -7,6 +7,7 @@ License: GPLv2+
 Group: System/Kernel and hardware
 Url: https://github.com/OpenAoE/aoetools
 
+BuildRequires:	make
 %description
 The aoetools are programs for users of the ATA over Ethernet (AoE)
 network storage protocol, a simple protocol for using storage over
